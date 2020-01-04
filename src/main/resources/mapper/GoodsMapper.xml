@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper   
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zhaoxioaya.mapper.BookMapper">
+	
+	<insert id="addError">
+		insert into error_record (bid,errorinfo) values(#{bid},#{errorinfo})
+	</insert>
+	
+	<insert id="addBook" parameterType="com.zhaoxioaya.entity.Book">
+		insert into book
+		(bid,bname,tid,phone,author,popular)
+		values
+		(#{bid},#{bname},#{tid},#{phone},#{author},#{popular})
+	</insert>
+	
+</mapper>
+    
